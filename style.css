@@ -1,0 +1,1067 @@
+/* =====================================
+   WEBSITE PMR WIRA
+   SMK NEGERI 1 ADIWERNA
+   ===================================== */
+
+:root {
+    --red: #b90f25;
+    --red-dark: #85091a;
+    --red-soft: #fff0f2;
+    --ink: #22252a;
+    --muted: #737780;
+    --paper: #ffffff;
+    --soft: #f5f5f3;
+    --line: #ece7e7;
+    --shadow: 0 12px 35px rgba(53, 18, 24, 0.08);
+}
+
+/* RESET */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 85px;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: var(--ink);
+    background: var(--paper);
+    line-height: 1.7;
+}
+
+a {
+    color: inherit;
+}
+
+section {
+    padding: 88px max(6%, calc((100% - 1180px) / 2));
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.25;
+    letter-spacing: -0.025em;
+}
+
+p {
+    line-height: 1.8;
+}
+
+/* =====================================
+   1. NAVBAR
+   ===================================== */
+
+.brand-logo {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+.navbar {
+    height: 76px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 0 max(5%, calc((100% - 1240px) / 2));
+    background: rgba(255, 255, 255, 0.97);
+    border-bottom: 1px solid #f0eeee;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    flex-shrink: 0;
+}
+
+.brand-mark {
+    width: 34px;
+    height: 34px;
+    display: grid;
+    place-items: center;
+    border-radius: 10px;
+    background: var(--red);
+    color: white;
+    font-size: 21px;
+    font-weight: 900;
+}
+
+.brand strong {
+    display: block;
+    font-size: 14px;
+    line-height: 1.2;
+}
+
+.brand small {
+    display: block;
+    color: #85858a;
+    font-size: 9px;
+    margin-top: 3px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 23px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: 700;
+    color: #55565c;
+    transition: color 0.2s;
+    white-space: nowrap;
+}
+
+.nav-links a:hover,
+.nav-links a:focus {
+    color: var(--red);
+}
+
+.menu-toggle {
+    display: none;
+    border: none;
+    background: var(--red);
+    color: white;
+    border-radius: 8px;
+    padding: 7px 11px;
+    font-size: 21px;
+    cursor: pointer;
+}
+
+/* =====================================
+   2. BERANDA / HERO
+   ===================================== */
+
+.hero {
+    min-height: 570px;
+    position: relative;
+    isolation: isolate;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    color: white;
+    padding: 90px 7%;
+
+    background-image: url("foto bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    overflow: hidden;
+}
+
+.hero::before,
+.hero::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    border: 1px solid rgba(255, 255, 255, 0.11);
+    border-radius: 50%;
+}
+
+.hero::before {
+    width: 540px;
+    height: 540px;
+    right: -100px;
+    top: -230px;
+    box-shadow:
+        0 0 0 45px rgba(255, 255, 255, 0.025),
+        0 0 0 95px rgba(255, 255, 255, 0.02);
+}
+
+.hero::after {
+    width: 350px;
+    height: 350px;
+    left: -120px;
+    bottom: -220px;
+    box-shadow: 0 0 0 45px rgba(255, 255, 255, 0.025);
+}
+
+.hero-shade {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: radial-gradient(
+        ellipse at 50% 35%,
+        rgba(237, 57, 83, 0.23),
+        transparent 60%
+    );
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.eyebrow {
+    display: inline-block;
+    color: white;
+    font-size: 15px;
+    font-weight: 800;
+    letter-spacing: 2.4px;
+}
+
+.eyebrow.red {
+    color: var(--red);
+}
+
+.eyebrow.light {
+    color: #d20a28;
+}
+
+.hero h1 {
+    margin: 20px 0;
+    font-size: clamp(38px, 5.5vw, 65px);
+    font-weight: 850;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.hero h1 span {
+    color: rgb(255, 255, 255, 0.85);
+}
+
+.hero-content > p {
+    max-width: 620px;
+    margin: 0 auto;
+    color: #faf7f8;
+    font-size: 15px;
+}
+
+.hero-actions {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 30px;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 18px;
+    padding: 12px 19px;
+    border-radius: 30px;
+    font-size: 11px;
+    font-weight: 800;
+    text-decoration: none;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+.btn-red {
+    background: #e21b38;
+    color: white;
+    box-shadow: 0 8px 20px #31081255;
+}
+
+.btn-red:hover {
+    background: #f02d49;
+}
+
+.btn-glass {
+    border: 1px solid #ffffff70;
+    color: white;
+    background: #ffffff0b;
+}
+
+.scroll-cue {
+    position: absolute;
+    bottom: 24px;
+    color: #f8dce1;
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-decoration: none;
+}
+
+.scroll-cue span {
+    padding-left: 10px;
+}
+
+/* =====================================
+   3. JUDUL SECTION
+   ===================================== */
+
+.section-heading {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto 43px;
+}
+
+.section-heading h2 {
+    font-size: clamp(28px, 3vw, 38px);
+    margin: 11px 0 12px;
+}
+
+.section-heading h2 span {
+    color: var(--red);
+}
+
+.section-heading > p {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+/* BACKGROUND SECTION */
+
+.soft-bg {
+    background: #f5f5f3;
+}
+
+/* =====================================
+   4. TENTANG KAMI
+   Background: Putih
+   ===================================== */
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 52px;
+    align-items: center;
+}
+
+.about-copy {
+    width: 100%;
+}
+
+.about-photo {
+    min-height: 340px;
+    overflow: hidden;
+    border-radius: 18px;
+    box-shadow: var(--shadow);
+}
+
+.about-photo img {
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+    display: block;
+}
+
+.photo-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(145deg, #f9dfe3, #f2b9c2);
+    color: var(--red-dark);
+    text-align: center;
+}
+
+.photo-symbol {
+    display: grid;
+    place-items: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #ffffff90;
+    font-size: 58px;
+}
+
+.photo-placeholder p {
+    margin-top: 15px;
+    font-weight: 800;
+}
+
+.photo-placeholder small {
+    font-size: 11px;
+}
+
+.about-copy h3 {
+    font-size: 24px;
+    margin-bottom: 17px;
+}
+
+.about-copy > p {
+    font-size: 14px;
+    color: var(--muted);
+    margin-bottom: 14px;
+}
+
+.mini-stat {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 12px;
+    background: var(--red-soft);
+}
+
+.mini-stat > span {
+    display: grid;
+    place-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: white;
+    color: var(--red);
+    font-size: 25px;
+}
+
+.mini-stat strong,
+.mini-stat small {
+    display: block;
+}
+
+.mini-stat strong {
+    font-size: 12px;
+}
+
+.mini-stat small {
+    font-size: 10px;
+    color: var(--muted);
+    margin-top: 3px;
+}
+
+/* VISI DAN MISI */
+
+.vision-grid {
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: 24px;
+    margin-top: 60px;
+}
+
+.vision-card {
+    padding: 30px;
+    border: 1px solid #f0dfe2;
+    border-radius: 15px;
+    background: white;
+    box-shadow: var(--shadow);
+}
+
+.round-icon {
+    width: 43px;
+    height: 43px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--red-soft);
+    color: var(--red);
+    font-size: 23px;
+}
+
+.vision-card h3 {
+    margin: 16px 0 10px;
+    font-size: 19px;
+}
+
+.vision-card p,
+.vision-card li {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.vision-card ul {
+    list-style: none;
+}
+
+.vision-card li {
+    position: relative;
+    padding: 7px 0 7px 20px;
+    border-bottom: 1px solid #f2eeee;
+}
+
+.vision-card li::before {
+    content: "•";
+    position: absolute;
+    left: 3px;
+    color: var(--red);
+    font-size: 20px;
+    line-height: 1.2;
+}
+
+.small-note {
+    max-width: 900px;
+    margin: 20px auto 0;
+    color: #89858a;
+    text-align: center;
+    font-size: 10px;
+}
+
+/* =====================================
+   5. KEPENGURUSAN
+   Background: Abu-abu soft
+   ===================================== */
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.team-card {
+    padding: 28px 18px;
+    background: white;
+    border: 1px solid #eee8e8;
+    border-radius: 15px;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.team-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+}
+
+.avatar {
+    width: 87px;
+    height: 87px;
+    display: grid;
+    place-items: center;
+    margin: 0 auto 17px;
+    border-radius: 50%;
+    background: #f9e0e4;
+    font-size: 42px;
+}
+
+.role,
+.tag {
+    color: var(--red);
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+.team-card h3 {
+    font-size: 14px;
+    margin: 4px 0 3px;
+}
+
+.team-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.pembina-card {
+    width: 280px;
+}
+
+.pengurus-pimpinan {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+    width: 100%;
+    max-width: 600px;
+}
+
+.pengurus-lainnya {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 15px;
+    width: 100%;
+}
+
+.pengurus-pimpinan .team-card,
+.pengurus-lainnya .team-card {
+    min-width: 0;
+    width: 100%;
+}
+
+/* =====================================
+   6. KEGIATAN
+   Background: Putih
+   ===================================== */
+
+.activity-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.activity-card {
+    display: flex;
+    gap: 17px;
+    padding: 25px 22px;
+    border: 1px solid var(--line);
+    border-radius: 15px;
+    background: rgb(255, 255, 255);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.activity-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow);
+}
+
+.activity-icon {
+    flex: 0 0 47px;
+    width: 47px;
+    height: 47px;
+    display: grid;
+    place-items: center;
+    border-radius: 13px;
+    background: var(--red-soft);
+    color: var(--red);
+    font-size: 25px;
+}
+
+.card-body h3 {
+    font-size: 15px;
+    margin: 7px 0;
+}
+
+.card-body p {
+    color: var(--muted);
+    font-size: 11px;
+    line-height: 1.8;
+}
+
+/* =====================================
+   7. ARTIKEL DAN BERITA
+   Background: Abu-abu soft
+   ===================================== */
+
+.heading-row {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: none;
+    text-align: left;
+}
+
+.heading-row > div {
+    max-width: 700px;
+}
+
+.text-link {
+    display: inline-block;
+    padding: 9px 14px;
+    border-radius: 22px;
+    background: var(--red);
+    color: white;
+    font-size: 10px;
+    font-weight: 800;
+    text-decoration: none;
+    white-space: nowrap;
+}
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 23px;
+    width: 100%;
+}
+
+.news-card {
+    min-width: 0;
+    height: 100%;
+}
+.news-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+}
+
+.news-image {
+    height: 185px;
+    display: flex;
+    align-items: end;
+    padding: 16px;
+    background: linear-gradient(135deg, #8f2436, #eaa3ae);
+}
+
+.news-image span {
+    padding: 6px 9px;
+    border-radius: 5px;
+    background: #ffffffdf;
+    color: var(--red);
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.news-one {
+    background: url("foto-prestasi.png") center/cover no-repeat;
+}
+
+.news-two {
+    background: url("foto-bina-madya-1.png") center/cover no-repeat;
+}
+
+.news-three {
+    background: url("baksos3.png") center/cover no-repeat;
+}
+
+
+.news-body {
+    padding: 21px;
+}
+
+.news-body small {
+    color: var(--red);
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 0.8px;
+}
+
+.news-body h3 {
+    margin: 9px 0;
+    font-size: 16px;
+}
+
+.news-body p {
+    color: var(--muted);
+    font-size: 11px;
+}
+
+.news-body a {
+    display: inline-block;
+    margin-top: 15px;
+    color: var(--red);
+    font-size: 11px;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+/* =====================================
+   8. KEJUARAAN DAN PRESTASI
+   Background: Putih
+   ===================================== */
+
+.achievement-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.achievement-card {
+    padding: 32px 25px;
+    border: 1px solid #eee3e4;
+    border-radius: 16px;
+    text-align: center;
+    background: white;
+}
+
+.achievement-card.featured {
+    background: var(--red);
+    color: white;
+    border-color: var(--red);
+    transform: translateY(-8px);
+    box-shadow: 0 16px 35px #b90f2526;
+}
+
+.trophy {
+    font-size: 43px;
+    margin-bottom: 14px;
+}
+
+.achievement-card h3 {
+    margin: 12px 0 9px;
+    font-size: 18px;
+}
+
+.achievement-card p {
+    font-size: 12px;
+    color: var(--muted);
+}
+
+.achievement-card.featured p {
+    color: #ffe8eb;
+}
+
+.achievement-card.featured .tag {
+    color: #ffe1e6;
+}
+
+/* =====================================
+   9. MEDIA SOSIAL
+   Background: Abu-abu soft
+   ===================================== */
+
+.social-section {
+    padding: 68px 6%;
+    color: var(--ink);
+    text-align: center;
+    background: #f5f5f3;
+}
+
+.social-inner {
+    max-width: 750px;
+    margin: auto;
+}
+
+.social-inner h2 {
+    font-size: clamp(27px, 4vw, 38px);
+    margin: 12px 0;
+}
+
+.social-inner h2 span {
+    color: var(--red);
+}
+
+.social-inner > p {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 13px;
+    margin: 27px 0 17px;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 130px;
+    justify-content: center;
+    padding: 12px 18px;
+    border: 1px solid #e0dada;
+    border-radius: 10px;
+    color: var(--red);
+    background: white;
+    text-decoration: none;
+    font-size: 20px;
+    transition: background 0.2s;
+}
+
+.social-links a:hover {
+    background: var(--red-soft);
+}
+
+.social-links span {
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.social-inner > small {
+    color: var(--muted);
+    font-size: 10px;
+}
+
+/* =====================================
+   10. FOOTER
+   Background: Merah tua
+   ===================================== */
+
+footer {
+    padding: 35px 6%;
+    text-align: center;
+    background: #8e0000;
+    color: white;
+}
+
+.footer-brand {
+    justify-content: center;
+    margin-bottom: 13px;
+}
+
+footer > p {
+    color: #ffe1e5;
+    font-size: 11px;
+}
+
+footer .copyright {
+    margin-top: 17px;
+    padding-top: 16px;
+    border-top: 1px solid #ffffff40;
+    color: #ffdede;
+    font-size: 10px;
+}
+
+/* =====================================
+   11. RESPONSIVE TABLET
+   ===================================== */
+
+@media (max-width: 1050px) {
+    .navbar {
+        padding: 0 4%;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .nav-links a {
+        font-size: 10px;
+    }
+
+    section {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .activity-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* =====================================
+   12. RESPONSIVE HP
+   ===================================== */
+
+@media (max-width: 760px) {
+    .navbar {
+        height: 70px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 69px;
+        left: 0;
+        right: 0;
+        padding: 18px 6% 22px;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        background: white;
+        border-bottom: 1px solid var(--line);
+        box-shadow: var(--shadow);
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .nav-links a {
+        padding: 11px 0;
+        font-size: 13px;
+        border-bottom: 1px solid #f4eeee;
+    }
+
+    .hero {
+        min-height: 530px;
+        padding: 70px 7%;
+    }
+
+    .hero h1 {
+        font-size: 39px;
+    }
+
+    .about-grid,
+    .vision-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-photo {
+        min-height: 260px;
+    }
+
+    .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .news-grid,
+    .achievement-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .heading-row {
+        align-items: start;
+        flex-direction: column;
+    }
+
+    .achievement-card.featured {
+        transform: none;
+    }
+}
+
+/* =====================================
+   13. RESPONSIVE HP KECIL
+   ===================================== */
+
+@media (max-width: 480px) {
+    section {
+        padding: 62px 5%;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .hero-content > p {
+        font-size: 13px;
+    }
+
+    .activity-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .activity-card {
+        padding: 21px 18px;
+    }
+
+    .team-grid {
+        gap: 12px;
+    }
+
+    .team-card {
+        padding: 22px 10px;
+    }
+
+    .avatar {
+        width: 68px;
+        height: 68px;
+        font-size: 34px;
+    }
+
+    .social-links {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .social-links a {
+        width: 100%;
+    }
+}
+
+/* =====================================
+   14. TAMBAHAN RESPONSIVE DAN GAMBAR
+   ===================================== */
+
+@media (max-width: 600px) {
+    .activity-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pengurus-lainnya {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 769px) {
+    .about-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
+}
+
+.member-avatar img {
+    width: 85px;
+    height: 85px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    margin: auto;
+}
+
+.section-title {
+    font-size: 38px;
+}

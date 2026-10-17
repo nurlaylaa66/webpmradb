@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan Rutin | PMR WIRA SMKN 1 Adiwerna</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+/* Background halaman merah-putih */
+body {
+    margin: 0;
+    padding: 40px 5%;
+    font-family: Arial, sans-serif;
+    color: #4a3636;
+    background: linear-gradient(
+        135deg,
+        #ffe5e5 0%,
+        #ffffff 50%,
+        #ffb3b3 100%
+    );
+    background-attachment: fixed;
+}
+
+/* Kotak konten transparan */
+.detail-container,
+main {
+    width: 100%;
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 30px;
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 24px;
+    box-shadow: 0 8px 30px rgba(180, 30, 30, 0.1);
+}
+
+/* Label KEBERSAMAAN */
+.detail-header .tag,
+.tag {
+    display: inline-block;
+    padding: 8px 18px;
+    color: #a31515;
+    background: linear-gradient(135deg, #ffcccc, #ffffff);
+    border: 1px solid #e6a0a0;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Judul utama */
+h1 {
+    margin: 20px 0 12px;
+    color: #8b1a1a;
+    font-size: clamp(28px, 4vw, 42px);
+    line-height: 1.2;
+}
+
+/* Informasi publikasi */
+.detail-header p {
+    color: #8b6666;
+}
+
+/* Isi artikel */
+.detail-content {
+    line-height: 1.8;
+    font-size: 16px;
+    color: #594747;
+    background: transparent;
+}
+
+/* Judul dokumentasi */
+h3 {
+    margin-top: 35px;
+    padding-left: 14px;
+    border-left: 5px solid #c62828;
+    color: #a31515;
+}
+
+/* Galeri foto: 3 foto per baris */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    width: 100%;
+    margin-top: 25px;
+    box-sizing: border-box;
+    background: transparent;
+}
+
+/* Ukuran foto */
+.gallery-grid img {
+    display: block;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 0 6px 18px rgba(160, 20, 20, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.gallery-grid img:hover {
+    transform: translateY(-4px);
+}
+
+/* Tombol kembali */
+.back-btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 24px;
+    color: white;
+    background: linear-gradient(135deg, #c62828, #ef5350);
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(180, 30, 30, 0.2);
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    background: #a31515;
+    transform: translateY(-2px);
+}
+
+/* Tampilan HP */
+@media (max-width: 650px) {
+    body {
+        padding: 20px 14px;
+    }
+
+    .detail-container,
+    main {
+        padding: 20px;
+        margin: 15px auto;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .gallery-grid img {
+        height: 230px;
+    }
+}
+    </style>
+</head>
+<body>
+
+    <main class="detail-container">
+        <div class="detail-header">
+            <span class="tag">PENGEMBANGAN DIRI</span>
+            <h1>Latihan Rutin PMR Wira</h1>
+            <p style="color: #777;">Dipublikasikan oleh Pengurus PMR SMKN 1 Adiwerna</p>
+        </div>
+
+        <div class="detail-content">
+            <p>
+                Latihan rutin (larut) adalah wadah utama bagi anggota PMR SMK Negeri 1 Adiwerna untuk menempa keterampilan, menambah wawasan kepalangmerahan, serta memperkuat kedisiplinan organisasi. Kegiatan ini dilaksanakan secara terjadwal di bawah bimbingan Pembina dan pengurus inti.
+            </p>
+            <p>
+                Materi yang dipelajari meliputi teknik pertolongan pertama (PP), perawatan keluarga (PK), evakuasi korban, kepemimpinan, hingga pengenalan sejarah dan prinsip-prinsip dasar Gerakan Palang Merah dan Bulan Sabit Merah Internasional.
+            </p>
+
+            <h3 style="margin-top: 40px; border-left: 4px solid #e74c3c; padding-left: 10px;">Dokumentasi Latihan Rutin</h3>
+            
+            <div class="gallery-grid">
+                <!-- Ganti nama file foto sesuai dengan foto latihan rutin Anda -->
+                <img src="larut-1.jpg" alt="Dokumentasi Latihan Rutin 1">
+                <img src="larut-2.jpg" alt="Dokumentasi Latihan Rutin 2">
+                <img src="larut-3.jpg" alt="Dokumentasi Latihan Rutin 3">
+                <img src="larut-4.jpg" alt="Dokumentasi Latihan Rutin 4">
+                <img src="larut-5.jpg" alt="Dokumentasi Latihan Rutin 5">
+                <img src="larut-6.jpg" alt="Dokumentasi Latihan Rutin 6">
+                <img src="larut-7.jpg" alt="Dokumentasi Latihan Rutin 7">
+                <img src="larut-8.jpg" alt="Dokumentasi Latihan Rutin 8">
+            </div>
+        </div>
+
+        <a href="index.html#kegiatan" class="back-btn">← Kembali ke Beranda</a>
+    </main>
+
+</body>
+</html>

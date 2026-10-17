@@ -1,0 +1,194 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dokumentasi Kejuaraan | PMR WIRA</title>
+
+    <link rel="stylesheet" href="style.css">
+<style>
+    /* Background halaman */
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: linear-gradient(
+            135deg,
+            rgba(255, 192, 192, 0.75),
+            rgba(255, 255, 255, 0.85),
+            rgba(255, 182, 182, 0.65)
+        );
+        color: #243653;
+        min-height: 100vh;
+    }
+
+    /* Bagian utama */
+    main {
+        padding: 35px 20px 0;
+    }
+
+    /* Judul halaman */
+    h1 {
+        color: #b71c1c;
+        text-align: center;
+        margin-bottom: 15px;
+        font-size: 40px;
+    }
+
+    /* Deskripsi galeri */
+    .deskripsi-galeri {
+        text-align: center;
+        color: #52627a;
+        line-height: 1.7;
+        margin: 0 auto 25px;
+        padding: 0 10px;
+    }
+
+    /* Grid foto */
+    .foto-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 15px;
+        max-width: 800px;
+        padding: 10px 5px;
+        margin: 0 auto;
+    }
+
+    /* Kotak foto transparan */
+    .foto-card {
+        background: rgba(255, 255, 255, 0.65);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.8);
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 5px 18px rgba(180, 30, 30, 0.12);
+        transition: transform 0.3s ease;
+    }
+
+    .foto-card:hover {
+        transform: translateY(-5px);
+    }
+
+    /* Gambar */
+    .foto-card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        display: block;
+    }
+
+    /* Keterangan foto */
+    .foto-keterangan {
+        padding: 18px;
+        background: rgba(255, 255, 255, 0.25);
+    }
+
+    .foto-keterangan h3 {
+        margin: 0 0 10px;
+        color: #b71c1c;
+        font-size: 18px;
+    }
+
+    .foto-keterangan p {
+        margin: 0;
+        line-height: 1.6;
+        color: #52627a;
+        font-size: 14px;
+    }
+
+    /* Tombol kembali di bawah */
+    .tombol-kembali {
+        display: flex;
+        justify-content: center;
+        padding: 30px 20px 40px;
+    }
+
+    .tombol-kembali a {
+        display: inline-block;
+        padding: 6px 12px;
+        background: linear-gradient(135deg, #ef5350, #b71c1c);
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        border: 1px solid rgba(255, 255, 255, 0.8);
+        border-radius: 12px;
+        box-shadow: 0 5px 15px rgba(180, 30, 30, 0.2);
+        transition: all 0.3s ease;
+        font-size: 10px;
+    }
+
+    .tombol-kembali a:hover {
+        background: linear-gradient(135deg, #b71c1c, #7f0000);
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(180, 30, 30, 0.3);
+    }
+
+    /* Tampilan tablet */
+    @media (max-width: 900px) {
+        .foto-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+    }
+
+    /* Tampilan HP */
+    @media (max-width: 500px) {
+        main {
+            padding: 25px 12px 0;
+        }
+
+        .foto-grid {
+            grid-template-columns: 1fr;
+            padding: 10px 5px;
+        }
+
+        .foto-card img {
+            height: 230px;
+        }
+
+        h1 {
+            font-size: 25px;
+        }
+    }
+</style>
+</head>
+
+<body>
+
+    <main>
+        <h1>Kejuaraan Latgab</h1>
+        <!-- Galeri foto -->
+        <div class="foto-grid">
+
+            <article class="foto-card">
+                <img src="juaralatgab1.jpg" alt="Foto prestasi PMR WIRA">
+                <div class="foto-keterangan">
+                    <h3>Juara Latgab</h3>
+                    <p>
+                        Dokumentasi prestasi PMR WIRA dalam Latgab
+                        se-Kabupaten Tegal tahun 2025.
+                    </p>
+                </div>
+            </article>
+
+            <article class="foto-card">
+                <img src="juaralatgab2.jpeg" alt="Foto penghargaan juara teraktif">
+                <div class="foto-keterangan">
+                    <h3>Juara Teraktif</h3>
+                    <p>
+                        PMR WIRA ADB mendapatkan juara teraktif pada
+                        Latgab se-Kabupaten Tegal tahun 2026.
+                    </p>
+                </div>
+            </article>
+
+        </div>
+        <div class="tombol-kembali">
+            <a href="index.html#kejuaraan">
+                ← Kembali ke Kejuaraan
+            </a>
+        </div>
+    </main>
+
+</body>
+</html>
