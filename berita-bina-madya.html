@@ -78,37 +78,118 @@
         .back-btn:hover {
             background: #c0392b;
         }
-        /* Kotak wadah gambar di samping teks */
+       
+/* Default: foto di samping teks */
 .content-image-box {
-    float: left;             /* Membuat gambar berada di kiri */
-    width: 380px;            /* Batasi lebar kotak gambar */
-    max-width: 100%;         /* Responsif untuk layar kecil */
-    margin-right: 25px;      /* Jarak spasi antara gambar dan teks di kanan */
+    float: left;
+    width: 380px;
+    max-width: 100%;
+    margin-right: 25px;
     margin-bottom: 15px;
 }
 
 .content-image-box img {
-    width: 100%;             /* Mengikuti lebar kotak (380px) */
-    height: 250px;           /* Batasi tinggi gambar agar tidak terlalu panjang */
-    object-fit: cover;       /* Agar gambar tidak gepeng/tertarik */
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
     border-radius: 8px;
     box-shadow: 0 3px 10px rgba(0,0,0,0.15);
 }
 
-.image-caption {
-    font-size: 0.8rem;
-    color: #666;
-    text-align: center;
-    margin-top: 6px;
-    font-style: italic;
+/* Khusus foto yang teksnya di bawah */
+.content-image-box.no-float {
+    float: none;
+    width: 100%;
+    max-width: 500px;
+    margin: 20px 0 15px;
 }
 
-/* Supaya paragraf di bawahnya tidak berantakan setelah gambar */
+.content-image-box.no-float img {
+    display: block;
+    height: 300px;
+}
+
+/* Membersihkan float setelah bagian artikel */
 .article-content::after {
     content: "";
     display: table;
     clear: both;
 }
+
+/* Menjaga tampilan foto di laptop dan HP */
+.content-image-box {
+    float: left;
+    width: 380px;
+    max-width: 100%;
+    margin-right: 25px;
+    margin-bottom: 15px;
+}
+
+.content-image-box img {
+    display: block;
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Foto yang teksnya berada di bawah */
+.content-image-box.no-float {
+    float: none;
+    width: 100%;
+    max-width: 500px;
+    margin: 20px 0 15px;
+}
+
+.content-image-box.no-float img {
+    height: 300px;
+}
+
+/* Tampilan HP */
+@media screen and (max-width: 600px) {
+    .article-container {
+        margin: 25px auto;
+        padding: 0 15px;
+    }
+
+    .article-title {
+        font-size: 1.6rem;
+    }
+
+    .content-image-box {
+        float: left;
+        width: 55%;
+        max-width: 380px;
+        margin-right: 12px;
+        margin-bottom: 10px;
+    }
+
+    .content-image-box img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .content-image-box.no-float {
+        float: none;
+        width: 100%;
+        max-width: 500px;
+        margin: 20px 0 15px;
+    }
+
+    .content-image-box.no-float img {
+        width: 100%;
+        height: auto;
+        max-height: 300px;
+        object-fit: cover;
+    }
+
+    .article-content {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+}
+
     </style>
 </head>
 <body>
@@ -186,12 +267,24 @@ Ketangkasan, ketenangan, serta kerja sama tim yang ditunjukkan oleh PMR SMPN 1
 Dukuhturi membuktikan bahwa latihan rutin yang mereka jalani selama ini berhasil mencetak 
 relawan muda yang sigap dalam situasi darurat
             <p>
+                <p>
+                <div class="content-image-box no-float">
+        <img src="foto-bina-madya2.png">
+        </div>
+        </p>
+
+        <p>
+
                 <h3></strong>Pos 4: solidaritas Hangat di SMPN 4 adiwerna</strong></h3>
+                </p>
             <p>
                 Rangkaian kunjungan pembinaan akhirnya ditutup dengan manis di SMPN 4 Adiwerna. 
 Suasana keakraban begitu kental terasa di pos terakhir ini. Tim pembina dari SMKN 1 
 Adiwerna melakukan evaluasi menyeluruh sekaligus memberikan suntikan motivasi agar para 
 anggota PMR tidak jenuh dalam berproses dan terus aktif berkegiatan.
+<div class="content-image-box">
+        <img src="foto-bina-madya3.png">
+        </div>
 Acara ditutup dengan yel-yel khas PMR 
 SMPN 4 Adiwerna yang bergemuruh 
 penuh energi, menyalurkan semangat 

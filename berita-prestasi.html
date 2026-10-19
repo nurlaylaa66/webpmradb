@@ -28,14 +28,47 @@
             line-height: 1.3;
             margin-bottom: 20px;
         }
-        .featured-image {
-            width: 100%;
-            height: 400px;
-            object-fit: cover;
-            border-radius: 12px;
-            margin-bottom: 10px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        }
+        
+.featured-image {
+    display: block;
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Tampilan di HP */
+@media screen and (max-width: 600px) {
+    .article-container {
+        margin: 25px auto;
+        padding: 0 15px;
+    }
+
+    .article-title {
+        font-size: 1.6rem;
+    }
+
+    .featured-image {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        border-radius: 10px;
+    }
+
+    .image-caption {
+        font-size: 0.8rem;
+        line-height: 1.6;
+    }
+
+    .article-header-logos img {
+        height: 50px;
+        max-width: 42%;
+    }
+}
+
         .image-caption {
             font-size: 0.85rem;
             color: #666;
@@ -114,13 +147,13 @@
             </p>
 
             <ul>
-                <li>Juara 1 Remaja Sehat Peduli Sesama (RSPS)</li>
-                <li>Juara 2 Aksi Cepat Tepat (ACT)</li>
-                <li>Juara 2 Pertolongan Pertama (PP)</li>
-                <li>Juara 2 Bidang Kepemimpinan</li>
-                <li>Juara 2 Bidang Kesehatan Remaja</li>
-                <li>Juara 2 Media Komunikasi, Informasi, dan Edukasi (KIE)</li>
-                <li>Juara 3 Kegiatan Anjangsana</li>
+                <li><strong>Juara 1</strong> Remaja Sehat Peduli Sesama (RSPS)</li>
+                <li><strong>Juara 2</strong> Aksi Cepat Tepat (ACT)</li>
+                <li><strong>Juara 2</strong> Pertolongan Pertama (PP)</li>
+                <li><strong>Juara 2</strong> Bidang Kepemimpinan</li>
+                <li><strong>Juara 2</strong> Bidang Kesehatan Remaja</li>
+                <li><strong>Juara 2</strong> Media Komunikasi, Informasi, dan Edukasi (KIE)</li>
+                <li><strong>Juara 3</strong> Kegiatan Anjangsana</li>
             </ul>
             <img src="foto-prestasi.png" alt="PMR Wira SMKN 1 Adiwerna Borong Penghargaan" class="featured-image">
         <p class="image-caption">Dokumentasi bersama kontingen PMR Wira SMKN 1 Adiwerna saat memamerkan piala 
