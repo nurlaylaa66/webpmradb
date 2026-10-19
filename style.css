@@ -146,6 +146,7 @@ p {
    2. BERANDA / HERO
    ===================================== */
 
+
 .hero {
     min-height: 570px;
     position: relative;
@@ -158,11 +159,12 @@ p {
 
     background-image: url("foto bg.jpg");
     background-size: cover;
-    background-position: center;
+    background-position: center center;
     background-repeat: no-repeat;
 
     overflow: hidden;
 }
+
 
 .hero::before,
 .hero::after {
@@ -1034,6 +1036,16 @@ footer .copyright {
 /* =====================================
    14. TAMBAHAN RESPONSIVE DAN GAMBAR
    ===================================== */
+
+/* Background beranda di HP */
+@media (max-width: 760px) {
+    .hero {
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        min-height: 530px;
+    }
+}
 
 @media (max-width: 600px) {
     .activity-grid {
